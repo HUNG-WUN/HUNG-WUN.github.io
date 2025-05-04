@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>關於我</title>
+  <title>關於我 | 小黃的網站</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,12 +17,28 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="intro-card">
-      <h1>我是誰？</h1>
-      <p>我叫小黃，是一名熱愛旅行與設計的前端工程師。</p>
-      <p>我喜歡攝影、撰寫部落格，並分享世界各地的故事。</p>
+  <div class="header-search">
+    <input type="text" id="searchInput" placeholder="搜尋關鍵字...">
+  </div>
+
+  <div class="container">
+    <div class="card search-content">
+      <h1>關於我</h1>
+      <p>小黃，一名熱愛旅行和網頁開發的工程師。</p>
+      <p>通過設計網站分享我的旅行經歷。</p>
+      <p>擅長 HTML、CSS、JavaScript。</p>
     </div>
-  </section>
+  </div>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    const content = document.querySelectorAll('.search-content p');
+    input.addEventListener('input', () => {
+      const keyword = input.value.toLowerCase();
+      content.forEach(p => {
+        p.style.display = p.textContent.toLowerCase().includes(keyword) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
