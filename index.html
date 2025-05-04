@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>首頁 | 小黃的網站</title>
+  <title>我的個人網站</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,34 +11,25 @@
       <ul>
         <li><a href="index.html">首頁</a></li>
         <li><a href="about.html">關於我</a></li>
-        <li><a href="gallery.html">相簿</a></li>
+        <li><a href="gallery.html">作品集</a></li>
         <li><a href="contact.html">聯絡我</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="header-search">
-    <input type="text" id="searchInput" placeholder="搜尋關鍵字...">
-  </div>
+  <main class="home">
+    <img src="images/avatar.jpg" alt="我的大頭照" class="avatar">
 
-  <div class="container">
-    <div class="card search-content">
-      <img src="images/profile.jpg" alt="大頭照">
-      <h1>嗨！我是小黃</h1>
-      <p>熱愛旅行與設計的前端工程師</p>
-      <p>最喜歡探索世界和分享旅遊心得</p>
-    </div>
-  </div>
+    <h1>你好，我是你的名字</h1>
+    <p>一位喜歡創作與學習的開發者。</p>
 
-  <script>
-    const input = document.getElementById('searchInput');
-    const content = document.querySelectorAll('.search-content p');
-    input.addEventListener('input', () => {
-      const keyword = input.value.toLowerCase();
-      content.forEach(p => {
-        p.style.display = p.textContent.toLowerCase().includes(keyword) ? '' : 'none';
-      });
-    });
-  </script>
+    <p>
+      👇 歡迎瀏覽我的網站，看看我做了哪些事情。
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 你的名字</p>
+  </footer>
 </body>
 </html>
