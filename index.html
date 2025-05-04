@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>歡迎來到我的旅遊風自介網站</title>
+  <title>首頁 | 小黃的網站</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,12 +17,28 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="intro-card">
-      <img src="a81b97150e514cbbb10bd39bd89998b84c112a09.jpg" alt="大頭照">
-      <h1>嗨，我是小黃！</h1>
-      <p>這是一個結合旅遊風格的自介網站，希望透過視覺和簡潔介紹帶你認識我。</p>
+  <div class="header-search">
+    <input type="text" id="searchInput" placeholder="搜尋關鍵字...">
+  </div>
+
+  <div class="container">
+    <div class="card search-content">
+      <img src="images/profile.jpg" alt="大頭照">
+      <h1>嗨！我是小黃</h1>
+      <p>熱愛旅行與設計的前端工程師</p>
+      <p>最喜歡探索世界和分享旅遊心得</p>
     </div>
-  </section>
+  </div>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    const content = document.querySelectorAll('.search-content p');
+    input.addEventListener('input', () => {
+      const keyword = input.value.toLowerCase();
+      content.forEach(p => {
+        p.style.display = p.textContent.toLowerCase().includes(keyword) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
