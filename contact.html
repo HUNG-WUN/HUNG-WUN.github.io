@@ -2,28 +2,43 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>聯絡我</title>
+  <title>聯絡我 - 我的網站</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="about.html">關於我</a></li>
-        <li><a href="gallery.html">作品集</a></li>
-        <li><a href="contact.html">聯絡我</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">我的網站</a>
+      </div>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">關於我</a></li>
+            <li><a href="gallery.html">作品集</a></li>
+            <li><a href="contact.html">聯絡我</a></li>
+          </ul>
+        </nav>
+        <form class="search-form">
+          <input type="text" placeholder="搜尋">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+    </div>
   </header>
 
   <main>
-    <h1>聯絡方式</h1>
+    <h1>聯絡我</h1>
+    <p>歡迎聯絡我，以下是我的聯絡方式：</p>
+
     <ul>
-      <li>Email: you@example.com</li>
-      <li>GitHub: <a href="https://github.com/你的帳號" target="_blank">你的帳號</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/你的帳號" target="_blank">你的帳號</a></li>
+      <li>Email：youremail@example.com</li>
+      <li>LinkedIn：<a href="https://linkedin.com/in/yourprofile">你的 LinkedIn</a></li>
+      <li>GitHub：<a href="https://github.com/yourusername">你的 GitHub</a></li>
     </ul>
+
+    <img src="images/sample2.jpg" alt="聯絡圖片" class="sample-img">
   </main>
 
   <footer>
