@@ -1,38 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>我的自介網站</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f4f4f4;
-      text-align: center;
-      padding: 50px;
-    }
-    img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #555;
-      margin-bottom: 20px;
-    }
-    .card {
-      background: white;
-      padding: 30px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 12px;
-    }
-  </style>
+  <title>歡迎來到我的旅遊風自介網站</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <img src="a81b97150e514cbbb10bd39bd89998b84c112a09.jpg" alt="我的大頭照">
-    <h1>黃敬汶</h1>
-    <p>你好！我是來自台灣的開發者，對前端技術與設計有濃厚興趣，目前正在學習 GitHub 與網頁開發。歡迎來到我的網站！</p>
-  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">關於我</a></li>
+        <li><a href="gallery.html">相簿</a></li>
+        <li><a href="contact.html">聯絡我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="intro-card">
+      <img src="images/profile.jpg" alt="大頭照">
+      <h1>嗨，我是小黃！</h1>
+      <p>這是一個結合旅遊風格的自介網站，希望透過視覺和簡潔介紹帶你認識我。</p>
+    </div>
+  </section>
 </body>
 </html>
