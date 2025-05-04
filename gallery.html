@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>我的相簿</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">關於我</a></li>
+        <li><a href="gallery.html">相簿</a></li>
+        <li><a href="contact.html">聯絡我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery">
+    <img src="images/photo1.jpg" alt="旅遊照片1">
+    <img src="images/photo2.jpg" alt="旅遊照片2">
+    <img src="images/photo3.jpg" alt="旅遊照片3">
+    <!-- 你可以加更多圖片 -->
+  </section>
+</body>
+</html>
