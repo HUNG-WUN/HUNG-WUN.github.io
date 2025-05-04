@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>聯絡我</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-form {
+      max-width: 500px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">關於我</a></li>
+        <li><a href="gallery.html">相簿</a></li>
+        <li><a href="contact.html">聯絡我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-form">
+    <h2>聯絡我</h2>
+    <form>
+      <input type="text" placeholder="你的名字" required>
+      <input type="email" placeholder="你的 Email" required>
+      <textarea rows="5" placeholder="想說什麼？"></textarea>
+      <button type="submit">送出</button>
+    </form>
+  </section>
+</body>
+</html>
