@@ -9,28 +9,72 @@ body {
 
 header {
   background-color: #111;
+  padding: 1em 2em;
   color: white;
-  padding: 1em 0;
-  text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 1em;
-}
-
-nav a {
+.logo a {
   color: white;
   text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-nav a:hover {
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5em;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav ul li a:hover {
   text-decoration: underline;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.search-form input[type="text"] {
+  padding: 0.4em 0.6em;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+}
+
+.search-form button {
+  padding: 0.4em 0.6em;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #666;
 }
 
 main {
@@ -51,17 +95,4 @@ footer {
   width: 150px;
   border-radius: 50%;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-
-.project {
-  background: #fafafa;
-  padding: 1em;
-  border: 1px solid #ddd;
-  flex: 1 1 45%;
 }
