@@ -1,26 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>相簿 | 小黃的網站</title>
+  <title>作品集</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-      padding: 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .gallery div {
-      position: relative;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -28,42 +11,29 @@
       <ul>
         <li><a href="index.html">首頁</a></li>
         <li><a href="about.html">關於我</a></li>
-        <li><a href="gallery.html">相簿</a></li>
+        <li><a href="gallery.html">作品集</a></li>
         <li><a href="contact.html">聯絡我</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="header-search">
-    <input type="text" id="searchInput" placeholder="搜尋圖片關鍵字...">
-  </div>
+  <main>
+    <h1>作品集</h1>
+    <div class="gallery">
+      <div class="project">
+        <h3>個人網站</h3>
+        <p>目前你正在看的這個網站</p>
+      </div>
 
-  <div class="gallery search-content">
-    <div>
-      <img src="images/photo1.jpg" alt="冰島之旅">
-      <p>冰島之旅</p>
+      <div class="project">
+        <h3>迷你遊戲</h3>
+        <p>我做的 HTML 小遊戲（敬請期待）</p>
+      </div>
     </div>
-    <div>
-      <img src="images/photo2.jpg" alt="京都散步">
-      <p>京都散步</p>
-    </div>
-    <div>
-      <img src="images/photo3.jpg" alt="布拉格街景">
-      <p>布拉格街景</p>
-    </div>
-  </div>
+  </main>
 
-  <script>
-    const input = document.getElementById('searchInput');
-    const items = document.querySelectorAll('.gallery div');
-
-    input.addEventListener('input', () => {
-      const keyword = input.value.toLowerCase();
-      items.forEach(item => {
-        const caption = item.querySelector('p').textContent.toLowerCase();
-        item.style.display = caption.includes(keyword) ? '' : 'none';
-      });
-    });
-  </script>
+  <footer>
+    <p>© 2025 你的名字</p>
+  </footer>
 </body>
 </html>
