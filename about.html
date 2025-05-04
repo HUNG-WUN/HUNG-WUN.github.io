@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>關於我 | 小黃的網站</title>
+  <title>關於我</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,34 +11,29 @@
       <ul>
         <li><a href="index.html">首頁</a></li>
         <li><a href="about.html">關於我</a></li>
-        <li><a href="gallery.html">相簿</a></li>
+        <li><a href="gallery.html">作品集</a></li>
         <li><a href="contact.html">聯絡我</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="header-search">
-    <input type="text" id="searchInput" placeholder="搜尋關鍵字...">
-  </div>
+  <main>
+    <h1>關於我</h1>
+    <p>你好，我是來自台灣的開發者。喜歡簡約設計、前端開發、邏輯推理與創作。</p>
 
-  <div class="container">
-    <div class="card search-content">
-      <h1>關於我</h1>
-      <p>小黃，一名熱愛旅行和網頁開發的工程師。</p>
-      <p>通過設計網站分享我的旅行經歷。</p>
-      <p>擅長 HTML、CSS、JavaScript。</p>
-    </div>
-  </div>
+    <h2>我的技能</h2>
+    <ul>
+      <li>HTML / CSS / JavaScript</li>
+      <li>Python / Git / Linux</li>
+      <li>圖像設計 / Markdown / VS Code</li>
+    </ul>
 
-  <script>
-    const input = document.getElementById('searchInput');
-    const content = document.querySelectorAll('.search-content p');
-    input.addEventListener('input', () => {
-      const keyword = input.value.toLowerCase();
-      content.forEach(p => {
-        p.style.display = p.textContent.toLowerCase().includes(keyword) ? '' : 'none';
-      });
-    });
-  </script>
+    <h2>我的興趣</h2>
+    <p>喜歡寫程式、攝影、畫圖、旅行、研究系統設計。</p>
+  </main>
+
+  <footer>
+    <p>© 2025 你的名字</p>
+  </footer>
 </body>
 </html>
