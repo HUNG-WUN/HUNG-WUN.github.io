@@ -1,113 +1,200 @@
-body {
-  font-family: "Helvetica Neue", sans-serif;
+/* 基本樣式 */
+* {
   margin: 0;
   padding: 0;
-  background-color: #fefefe;
-  color: #333;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 頁首樣式 */
 header {
-  background-color: #111;
-  padding: 1em 2em;
+  background-color: #333;
   color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
-.logo a {
+.logo-btn img {
+  height: 50px;
+  width: auto;
+}
+
+nav.main-nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav.main-nav li {
+  display: inline-block;
+}
+
+nav.main-nav li a {
   color: white;
-  text-decoration: none;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 16px;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1em;
+nav.main-nav li a:hover {
+  color: #ff6347;
 }
 
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 1.2em;
-}
-
-.main-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.main-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-}
-
-.search-form input[type="text"] {
-  padding: 0.2em 0.4em;
-  font-size: 0.9em;
-  width: 100px;
-  border-radius: 4px 0 0 4px;
+nav .search-form input {
+  padding: 5px;
+  margin-right: 5px;
   border: none;
-  outline: none;
+  border-radius: 4px;
 }
 
-.search-form button {
-  padding: 0.2em 0.5em;
-  border: none;
-  background-color: #444;
+nav .search-form button {
+  background-color: #ff6347;
   color: white;
-  border-radius: 0 4px 4px 0;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9em;
 }
 
-.search-form button:hover {
-  background-color: #666;
+nav .search-form button:hover {
+  background-color: #e55347;
 }
 
+/* 響應式設計：手機 */
+.nav-toggle {
+  display: none;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  nav.main-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px;
+  }
+
+  nav.main-nav ul.active {
+    display: flex;
+  }
+
+  nav.main-nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav.main-nav li a {
+    padding: 10px;
+    width: 100%;
+    display: block;
+  }
+
+  .search-form {
+    margin-top: 10px;
+  }
+}
+
+/* 內容區域 */
 main {
-  padding: 2em;
-  max-width: 800px;
-  margin: auto;
-}
-
-footer {
-  text-align: center;
-  padding: 1em;
-  background: #eee;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .avatar {
-  display: block;
-  margin: 1em auto;
-  width: 150px;
+  max-width: 150px;
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
-
-.section {
-  margin-top: 3em;
+  margin-bottom: 20px;
 }
 
 .sample-img {
-  display: block;
-  width: 100%;
-  max-width: 700px;
-  margin: 1em auto;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* 文章區樣式 */
+.blog-post {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.blog-post h2 {
+  color: #ff6347;
+}
+
+.blog-post p {
+  color: #555;
+}
+
+/* 頁腳 */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* 動畫效果 */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
