@@ -2,31 +2,8 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>聯絡我</title>
+  <title>聯絡我 | 小黃的網站</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .contact-form {
-      max-width: 500px;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    input, textarea {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -40,14 +17,20 @@
     </nav>
   </header>
 
-  <section class="contact-form">
-    <h2>聯絡我</h2>
-    <form>
-      <input type="text" placeholder="你的名字" required>
-      <input type="email" placeholder="你的 Email" required>
-      <textarea rows="5" placeholder="想說什麼？"></textarea>
-      <button type="submit">送出</button>
-    </form>
-  </section>
+  <div class="header-search">
+    <input type="text" id="searchInput" placeholder="搜尋關鍵字...">
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1>聯絡我</h1>
+      <form>
+        <input type="text" placeholder="你的名字" required>
+        <input type="email" placeholder="你的 Email" required>
+        <textarea rows="5" placeholder="想對我說什麼？"></textarea>
+        <button type="submit">送出</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
