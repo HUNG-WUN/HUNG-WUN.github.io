@@ -2,14 +2,19 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>我的相簿</title>
+  <title>相簿 | 小黃的網站</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .gallery div {
+      position: relative;
     }
     .gallery img {
       width: 100%;
@@ -29,11 +34,36 @@
     </nav>
   </header>
 
-  <section class="gallery">
-    <img src="images/photo1.jpg" alt="旅遊照片1">
-    <img src="images/photo2.jpg" alt="旅遊照片2">
-    <img src="images/photo3.jpg" alt="旅遊照片3">
-    <!-- 你可以加更多圖片 -->
-  </section>
+  <div class="header-search">
+    <input type="text" id="searchInput" placeholder="搜尋圖片關鍵字...">
+  </div>
+
+  <div class="gallery search-content">
+    <div>
+      <img src="images/photo1.jpg" alt="冰島之旅">
+      <p>冰島之旅</p>
+    </div>
+    <div>
+      <img src="images/photo2.jpg" alt="京都散步">
+      <p>京都散步</p>
+    </div>
+    <div>
+      <img src="images/photo3.jpg" alt="布拉格街景">
+      <p>布拉格街景</p>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    const items = document.querySelectorAll('.gallery div');
+
+    input.addEventListener('input', () => {
+      const keyword = input.value.toLowerCase();
+      items.forEach(item => {
+        const caption = item.querySelector('p').textContent.toLowerCase();
+        item.style.display = caption.includes(keyword) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
