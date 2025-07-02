@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>首頁 - 我的網站</title>
+  <title>首頁 - 黃敬汶 OWO 的網站</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -11,7 +11,7 @@
     <div class="nav-container">
       <a href="index.html" class="logo-btn">
         <img src="images/logo.png" alt="Logo">
-        <span>我的網站</span>
+        <span>黃敬汶 OWO</span>
       </a>
       <button class="nav-toggle">☰</button>
       <nav class="main-nav">
@@ -33,17 +33,32 @@
   </header>
 
   <main>
-    <img src="images/avatar.jpg" alt="我的大頭照" class="avatar">
-    <h1>你好，我是黃敬汶OWO</h1>
-    <p>這是一段簡短的個人介紹，用來展示首頁的排版效果。</p>
+    <section class="hero fade-in">
+      <img src="images/avatar.jpg" alt="我的大頭照" class="avatar">
+      <h1>Hi! 我是黃敬汶 OWO</h1>
+      <p>歡迎來到我的個人網站。這裡展示我的作品、技術與生活點滴。</p>
+      <a href="about.html" class="cta-btn">認識我更多</a>
+    </section>
 
-    <section>
+    <section class="latest-news fade-in">
       <h2>最新動態</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <img src="images/sample1.jpg" alt="示意圖1" class="sample-img">
+      <div class="news-list">
+        <div class="news-card">
+          <img src="images/sample1.jpg" alt="最新消息1">
+          <h3>Lorem Ipsum News</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod.</p>
+        </div>
+        <div class="news-card">
+          <img src="images/sample2.jpg" alt="最新消息2">
+          <h3>Dolor Sit Amet</h3>
+          <p>Proin eget tortor risus. Nulla porttitor accumsan tincidunt.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>© 2025 黃敬汶</footer>
+  <footer>
+    <span>© 2025 黃敬汶 OWO</span>
+  </footer>
 </body>
 </html>
