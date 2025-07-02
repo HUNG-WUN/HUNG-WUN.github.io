@@ -7,13 +7,13 @@
 
 body {
   font-family: 'Noto Sans TC', 'Arial', sans-serif;
-  background: linear-gradient(135deg, #f4f4f4 60%, #ffe5ec 100%);
+  background: linear-gradient(135deg, #f4f4f4 60%, #dbe9ff 100%);
   color: #333;
   min-height: 100vh;
 }
 
 h1, h2, h3 {
-  color: #ff6347;
+  color: #2196f3;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
@@ -25,7 +25,7 @@ a {
 }
 
 a:hover {
-  color: #ff6347;
+  color: #2196f3;
 }
 
 img {
@@ -36,7 +36,7 @@ img {
 
 /* 頁首樣式 */
 header {
-  background: linear-gradient(90deg, #333 70%, #ff6347 100%);
+  background: linear-gradient(90deg, #333 70%, #2196f3 100%);
   color: white;
   padding: 10px 0;
   position: sticky;
@@ -65,7 +65,7 @@ header {
   height: 48px;
   width: 48px;
   border-radius: 50%;
-  border: 2px solid #ff6347;
+  border: 2px solid #2196f3;
   background: #fff;
 }
 
@@ -86,7 +86,7 @@ nav.main-nav li a {
 
 nav.main-nav li a:hover {
   background: #fff3;
-  color: #ff6347;
+  color: #2196f3;
 }
 
 nav .search-form input {
@@ -99,7 +99,7 @@ nav .search-form input {
 }
 
 nav .search-form button {
-  background-color: #ff6347;
+  background-color: #2196f3;
   color: white;
   padding: 6px 10px;
   border: none;
@@ -109,7 +109,7 @@ nav .search-form button {
 }
 
 nav .search-form button:hover {
-  background-color: #e55347;
+  background-color: #1976d2;
 }
 
 /* 響應式設計：手機 */
@@ -159,35 +159,35 @@ nav .search-form button:hover {
 .hero {
   text-align: center;
   padding: 60px 20px 40px 20px;
-  background: linear-gradient(120deg, #fff 80%, #ffe5ec 100%);
+  background: linear-gradient(120deg, #fff 80%, #dbe9ff 100%);
   border-radius: 0 0 30px 30px;
-  box-shadow: 0 8px 32px rgba(255,99,71,0.03);
+  box-shadow: 0 8px 32px rgba(33,150,243,0.03);
   margin-bottom: 40px;
 }
 
 .avatar {
   max-width: 140px;
   border-radius: 50%;
-  border: 4px solid #ff6347;
+  border: 4px solid #2196f3;
   margin-bottom: 18px;
-  box-shadow: 0 2px 12px rgba(255,99,71,0.08);
+  box-shadow: 0 2px 12px rgba(33,150,243,0.08);
 }
 
 .cta-btn {
   display: inline-block;
   margin-top: 24px;
   padding: 10px 28px;
-  background: #ff6347;
+  background: #2196f3;
   color: #fff;
   border-radius: 24px;
   font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 1px;
   transition: background 0.2s;
-  box-shadow: 0 2px 8px rgba(255,99,71,0.1);
+  box-shadow: 0 2px 8px rgba(33,150,243,0.1);
 }
 .cta-btn:hover {
-  background: #e55347;
+  background: #1976d2;
 }
 
 /* 最新動態區 */
@@ -205,7 +205,7 @@ nav .search-form button:hover {
 .news-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(255,99,71,0.07);
+  box-shadow: 0 2px 12px rgba(33,150,243,0.07);
   padding: 18px;
   width: 280px;
   text-align: left;
@@ -214,7 +214,7 @@ nav .search-form button:hover {
 
 .news-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 6px 24px rgba(255,99,71,0.15);
+  box-shadow: 0 6px 24px rgba(33,150,243,0.15);
 }
 
 .news-card img {
@@ -235,25 +235,49 @@ main {
 /* 文章區樣式 */
 .blog-post {
   margin-bottom: 30px;
-  border-bottom: 1px solid #ffd6cc;
+  border-bottom: 1px solid #bbdefb;
   padding-bottom: 24px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(255,99,71,0.04);
+  box-shadow: 0 2px 8px rgba(33,150,243,0.04);
 }
 
 .blog-post h2 {
-  color: #ff6347;
+  color: #2196f3;
 }
 
 .blog-post p {
   color: #555;
 }
 
+/* 關於我區塊 */
+.about-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 2px 12px rgba(33,150,243,0.07);
+  margin-bottom: 40px;
+}
+.about-flex {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-flex img {
+  max-width: 140px;
+  border-radius: 50%;
+  border: 3px solid #2196f3;
+}
+.about-flex ul {
+  margin-top: 16px;
+  padding-left: 18px;
+}
+
 /* 頁腳 */
 footer {
   text-align: center;
-  background: linear-gradient(90deg, #333 70%, #ff6347 100%);
+  background: linear-gradient(90deg, #333 70%, #2196f3 100%);
   color: white;
   padding: 16px;
   margin-top: 40px;
