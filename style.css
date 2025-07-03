@@ -64,7 +64,7 @@ header {
 .logo-btn img {
   height: 48px;
   width: 48px;
-  border-radius: 0;      /* 方形 LOGO */
+  border-radius: 50%;      /* 方形 LOGO */
   border: 2px solid #2196f3;
   background: #fff;
 }
