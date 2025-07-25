@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>讀書計畫 - 我的網站</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <div class="nav-container">
-      <a href="index.html" class="logo-btn">
-        <img src="images/logo.png" alt="Logo">
-        <span>我的網站</span>
-      </a>
+      <a href="index.html" class="logo-btn">我的網站</a>
       <button class="nav-toggle">☰</button>
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">首頁</a></li>
           <li><a href="about.html">關於我</a></li>
           <li><a href="gallery.html">作品集</a></li>
-          <li><a href="studyplan.html">讀書計畫</a></li>
+          <li><a href="studyplan.html" class="active">讀書計畫</a></li>
+          <li><a href="research.html">研究計畫</a></li>
           <li><a href="contact.html">聯絡我</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
     <h1>讀書計畫</h1>
-
-    <section class="study-section">
-      <h2>報考動機</h2>
-      <p>我對OO領域充滿興趣，期望透過大學進一步精進技術並貢獻社會。</p>
-    </section>
-
-    <section class="study-section">
-      <h2>課程規劃</h2>
-      <p>規劃修習資料結構、人工智慧、雲端運算等核心課程，提升專業能力。</p>
-    </section>
-
-    <section class="study-section">
-      <h2>課餘學習計畫</h2>
-      <p>課餘時間預計參加競賽與專題研究，並閱讀相關書籍與論文。</p>
-    </section>
+    <ul>
+      <li><a href="study_motivation.html">報考動機</a></li>
+      <li><a href="study_courses.html">課程規劃</a></li>
+      <li><a href="study_extra.html">課餘學習計畫</a></li>
+    </ul>
   </main>
-
   <footer>© 2025 黃敬汶</footer>
 </body>
 </html>
