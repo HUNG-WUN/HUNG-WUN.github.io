@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>作品集 - 黃敬汶 Gavin</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-btn">
+        <img src="images/logo.png" alt="Logo">
+        <span>黃敬汶 Gavin</span>
+      </a>
+      <button class="nav-toggle">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="about.html">關於我</a></li>
+          <li><a href="resume.html">履歷</a></li>
+          <li><a href="gallery.html">作品集</a></li>
+          <li><a href="blog.html">文章區</a></li>
+          <li><a href="contact.html">聯絡我</a></li>
+          <li>
+            <form class="search-form">
+              <input type="text" id="searchInput" placeholder="搜尋文章">
+              <button type="submit">🔍</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>精選作品集</h1>
+    
+    <div class="news-list" style="margin-top: 20px;">
+      <div class="news-card" style="width: 320px;">
+        <img src="images/sample1.jpg" alt="Attention 硬體加速器">
+        <h3>FPGA/ASIC Attention 加速設計</h3>
+        <p>針對 Transformer 核心進行矩陣乘法與 Softmax 非線性近似優化，並引入 Token 剪枝提升推論吞吐量。</p>
+      </div>
+
+      <div class="news-card" style="width: 320px;">
+        <img src="images/sample2.jpg" alt="梅毒抗體分析">
+        <h3>梅毒螺旋體抗體自動檢測系統</h3>
+        <p>結合 YOLO 物件偵測與 RPR 測試卡影像前處理，降低人為判讀誤差並提升篩檢效率（TANET 2024）。</p>
+      </div>
+
+      <div class="news-card" style="width: 320px;">
+        <img src="images/sample1.jpg" alt="自動化控制引擎">
+        <h3>ADB + OpenCV 自動控制引擎</h3>
+        <p>基於 pure-python-adb 與模板匹配技術，開發具備動態 ROI 區域掃描與棋盤映射的即時自動控制軟體。</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 黃敬汶 Gavin</footer>
+</body>
+</html>
