@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>履歷 - 黃敬汶 Gavin</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-btn">
+        <img src="images/logo.png" alt="Logo">
+        <span>黃敬汶 Gavin</span>
+      </a>
+      <button class="nav-toggle">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="about.html">關於我</a></li>
+          <li><a href="resume.html">履歷</a></li>
+          <li><a href="gallery.html">作品集</a></li>
+          <li><a href="blog.html">文章區</a></li>
+          <li><a href="contact.html">聯絡我</a></li>
+          <li>
+            <form class="search-form">
+              <input type="text" id="searchInput" placeholder="搜尋文章">
+              <button type="submit">🔍</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-section fade-in">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+        <h1>個人履歷 (Resume)</h1>
+        <a href="Resume_Gavin_Huang.pdf" class="cta-btn" style="margin: 0; padding: 8px 20px; font-size: 0.95rem;" target="_blank">📥 下載 PDF 履歷</a>
+      </div>
+
+      <h2>黃敬汶 (Gavin Huang)</h2>
+      <p><strong>Email:</strong> s411147136@gmail.com | <strong>GitHub:</strong> <a href="https://github.com/HUNG-WUN" target="_blank">github.com/HUNG-WUN</a></p>
+      <p>專長領域：Medical AI、電腦視覺、FPGA/ASIC 硬體加速、RESTful API 後端開發、自動化系統控制</p>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #bbdefb;">
+
+      <h2>教育背景 (Education)</h2>
+      <p><strong>國立靜宜大學 資訊工程學系</strong> | 學士 (2022 – 2026)</p>
+      <ul>
+        <li>六學期平均成績：<strong>93.81 分</strong>，班排名：<strong>2/57</strong>，系排名：<strong>3/117 (Top 2.56%)</strong></li>
+        <li>獲頒 <strong>李家同教授獎學金</strong>（獎勵程式設計與電腦科學潛力學生）</li>
+      </ul>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #bbdefb;">
+
+      <h2>專業技能 (Technical Skills)</h2>
+      <ul>
+        <li><strong>程式語言：</strong> Python, C, C++, Verilog/VHDL, SQL, HTML/CSS</li>
+        <li><strong>AI / 機器學習：</strong> PyTorch, TensorFlow, YOLO, OpenCV, MediaPipe, XGBoost, SHAP, Ollama</li>
+        <li><strong>硬體開發 & EDA：</strong> Vivado, Quartus, ISE, ModelSim, FPGA (Basys2/Basys3), TM4C1294, CUDA</li>
+        <li><strong>後端與開發工具：</strong> FastAPI, Flask, SQLite3, MySQL, Docker, pure-python-adb, Git, Linux/WSL2</li>
+      </ul>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #bbdefb;">
+
+      <h2>學術論文發表 (Publications)</h2>
+      <ul>
+        <li><strong>[TANET 2024]</strong> 黃敬汶, 林進福, 馬芯瑜, 林盈蓁, 蔡馨儀, 劉志俊, <em>"基於深度學習技術的梅毒螺旋體抗體檢測影像分析系統"</em>（第一作者／口頭報告講者）</li>
+        <li><strong>[ITAOI 2025]</strong> 黃敬汶, 馬芯瑜, 蔡馨儀, 林盈蓁, 劉志俊, <em>"基於深度學習技術的乳房神經纖維瘤辨識系統"</em>（第一作者／口頭報告講者）</li>
+        <li><strong>[TANET 2024]</strong> 張娟綺, 黃亭穎, 陳皓綸, 曹伶韻, 黃敬汶, 林國里, 廖偉志, 楊貴子, 蔡宏隆, 劉志俊, <em>"基於深度學習之智慧洗手品質評估系統"</em>（共同作者）</li>
+      </ul>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #bbdefb;">
+
+      <h2>專案與研究經歷 (Projects & Research)</h2>
+      <ul>
+        <li><strong>FPGA/ASIC Attention 機制硬體加速設計：</strong> 針對 Transformer 架構設計硬體加速電路，拆解矩陣乘法單元與 Softmax 非線性近似模組，並規劃 Token 剪枝與流水線架構。</li>
+        <li><strong>AI Alpha Hunter 量化回測引擎：</strong> 串接 FinMind/yfinance API，針對台美股指標（KD、融券比）設計選股策略，並透過 XGBoost 與 SHAP 視覺化模型特徵可解釋性。</li>
+        <li><strong>高效能遊戲自動化控制引擎：</strong> 基於 pure-python-adb 與 OpenCV 模板匹配，開發具備動態 ROI 區域掃描與 5x4 棋盤映射演算法的即時控制系統。</li>
+        <li><strong>輕量化私有雲 API 與本地端 LLM 摘要系統：</strong> 以 FastAPI 構建支援使用者驗證與 BLOB 儲存的後端，並整合 Ollama (DeepSeek-R1 / Qwen2.5) 建立本地端學術文件自動摘要管道。</li>
+      </ul>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #bbdefb;">
+
+      <h2>競賽獲獎與專業認證 (Honors & Certificates)</h2>
+      <ul>
+        <li><strong>校園黑客松自走車競賽：</strong> 第一名（擔任隊長，負責控制演算法與硬體整合）</li>
+        <li><strong>AI 應用 Plus 我的未來競賽（實務組）：</strong> 金獎</li>
+        <li><strong>台積電新人訓練中心 (TSMC NTC)：</strong> ETC 機台基礎課程結訓 (32 Hours)</li>
+        <li><strong>Google Cloud 數位人才探索計畫：</strong> 雲端與生成式 AI 結業認證</li>
+        <li><strong>程式競賽經歷：</strong> ICPC Asia Taichung Regional (2024)、PUPC (2023–2025)、CPE 大專程式能力檢定（前 11.8%，解出 3 題）</li>
+      </ul>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #bbdefb;">
+
+      <h2>服務與教學經歷 (Experience)</h2>
+      <ul>
+        <li><strong>課程教學助理 (TA)：</strong> 擔任《C 程式設計》、《C++ 進階程式設計》、《Python 程式設計》與《自走車控制實作》課程助教。</li>
+        <li><strong>宿舍幹部經歷：</strong> 靜宜大學學生宿舍舍監與區長，統籌跨層營運與危機處理。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2025 黃敬汶 Gavin</span>
+  </footer>
+</body>
+</html>
