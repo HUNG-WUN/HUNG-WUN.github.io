@@ -2,6 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>作品集 - 黃敬汶 Gavin</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
@@ -10,7 +11,6 @@
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo-btn">
-        <img src="images/logo.png" alt="Logo">
         <span>黃敬汶 Gavin</span>
       </a>
       <button class="nav-toggle">☰</button>
@@ -19,45 +19,50 @@
           <li><a href="index.html">首頁</a></li>
           <li><a href="about.html">關於我</a></li>
           <li><a href="resume.html">履歷</a></li>
-          <li><a href="gallery.html">作品集</a></li>
+          <li><a href="gallery.html" class="active">作品集</a></li>
           <li><a href="blog.html">文章區</a></li>
           <li><a href="photos.html">相簿紀錄</a></li>
           <li><a href="contact.html">聯絡我</a></li>
-          <li>
-            <form class="search-form">
-              <input type="text" id="searchInput" placeholder="搜尋文章">
-              <button type="submit">🔍</button>
-            </form>
-          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <h1>精選作品集</h1>
-    
-    <div class="news-list" style="margin-top: 20px;">
-      <div class="news-card" style="width: 320px;">
-        <img src="images/sample1.jpg" alt="梅毒抗體分析">
-        <h3>梅毒螺旋體抗體自動檢測系統</h3>
-        <p>結合 YOLO 物件偵測與 RPR 測試卡影像前處理，降低人為判讀誤差並提升篩檢效率（TANET 2024）。</p>
-      </div>
+  <main class="fade-in">
+    <section class="card-section">
+      <h1>精選作品集</h1>
+      <p>點擊下方卡片可查看各專案詳細內容與展示。</p>
+    </section>
 
-      <div class="news-card" style="width: 320px;">
-        <img src="images/sample2.jpg" alt="自動化控制引擎">
-        <h3>ADB + OpenCV 自動控制引擎</h3>
-        <p>基於 pure-python-adb 與模板匹配技術，開發具備動態 ROI 區域掃描與棋盤映射的即時自動控制軟體。</p>
-      </div>
+    <div class="news-grid">
+      <a href="blog.html#syphilis" class="news-card-link">
+        <div class="news-card">
+          <img src="images/cert_tanet.jpg" alt="梅毒抗體分析" onerror="this.src='https://via.placeholder.com/300x180/2196f3/ffffff?text=Medical+AI'">
+          <h3>梅毒螺旋體抗體自動檢測系統</h3>
+          <p>結合 YOLO 物件偵測與 RPR 測試卡影像前處理，降低人為判讀誤差並提升篩檢效率（TANET 2024）。</p>
+        </div>
+      </a>
 
-      <div class="news-card" style="width: 320px;">
-        <img src="images/sample1.jpg" alt="量化選股回測">
-        <h3>AI Alpha Hunter 量化回測引擎</h3>
-        <p>整合 FinMind API 進行台美股數據分析，結合 KD 與融券比率指標，並運用 XGBoost 與 SHAP 視覺化模型特徵。</p>
-      </div>
+      <a href="blog.html#adb" class="news-card-link">
+        <div class="news-card">
+          <img src="images/sample2.jpg" alt="自動化控制引擎" onerror="this.src='https://via.placeholder.com/300x180/2196f3/ffffff?text=ADB+Control'">
+          <h3>ADB + OpenCV 自動控制引擎</h3>
+          <p>基於 pure-python-adb 與模板匹配技術，開發具備動態 ROI 區域掃描與棋盤映射的即時自動控制軟體。</p>
+        </div>
+      </a>
+
+      <a href="blog.html#quant" class="news-card-link">
+        <div class="news-card">
+          <img src="images/sample1.jpg" alt="量化選股回測" onerror="this.src='https://via.placeholder.com/300x180/2196f3/ffffff?text=Quant+Trading'">
+          <h3>AI Alpha Hunter 量化回測引擎</h3>
+          <p>整合 FinMind API 進行台美股數據分析，結合 KD 與融券比率指標，並運用 XGBoost 與 SHAP 視覺化模型特徵。</p>
+        </div>
+      </a>
     </div>
   </main>
 
-  <footer>© 2025 黃敬汶 Gavin</footer>
+  <footer>
+    <span>© 2025 黃敬汶 Gavin</span>
+  </footer>
 </body>
 </html>

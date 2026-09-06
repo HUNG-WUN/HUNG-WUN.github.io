@@ -387,3 +387,15 @@ footer {
   font-size: 0.88rem;
   line-height: 1.4;
 }
+/* 卡片連結樣式修飾 */
+.news-card-link,
+.photo-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.news-card-link:hover .news-card h3,
+.photo-card-link:hover .photo-caption h3 {
+  color: #2563eb;
+}
