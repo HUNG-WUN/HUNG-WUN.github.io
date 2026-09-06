@@ -39,7 +39,7 @@ main {
 }
 
 /* ==========================================================================
-   Header & Navigation
+   Header & Navigation (左側名字，右側選單對齊)
    ========================================================================== */
 header {
   background: rgba(15, 23, 42, 0.95);
@@ -55,23 +55,26 @@ header {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* 左側名字與右側選單向兩端推開 */
   align-items: center;
   padding: 14px 24px;
 }
 
-.logo-btn span {
-  font-size: 1.2rem;
+.logo-btn {
+  font-size: 1.25rem;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 nav.main-nav ul {
   list-style: none;
   display: flex;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav.main-nav li a {
@@ -81,43 +84,13 @@ nav.main-nav li a {
   padding: 8px 14px;
   border-radius: 6px;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 nav.main-nav li a:hover,
 nav.main-nav li a.active {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.12);
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  padding: 2px 6px;
-  margin-left: 8px;
-}
-
-.search-form input {
-  border: none;
-  background: transparent;
-  color: #fff;
-  padding: 6px 8px;
-  font-size: 0.85rem;
-  outline: none;
-  width: 110px;
-}
-
-.search-form input::placeholder {
-  color: #94a3b8;
-}
-
-.search-form button {
-  background: transparent;
-  border: none;
-  color: #94a3b8;
-  cursor: pointer;
-  padding: 4px;
 }
 
 .nav-toggle {
@@ -150,7 +123,7 @@ nav.main-nav li a.active {
 }
 
 /* ==========================================================================
-   Unified Card Layout (適用於所有頁面卡片)
+   Unified Card Layout (適用於所有頁面內容卡片)
    ========================================================================== */
 .card-section {
   background: #ffffff;
@@ -187,7 +160,7 @@ nav.main-nav li a.active {
 }
 
 /* ==========================================================================
-   Hero Section (首頁上方個人卡片)
+   Hero Section (首頁上方簡介卡片)
    ========================================================================== */
 .hero-card {
   text-align: center;
@@ -256,6 +229,13 @@ nav.main-nav li a.active {
   gap: 20px;
 }
 
+.news-card-link,
+.photo-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .news-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -268,6 +248,11 @@ nav.main-nav li a.active {
   transform: translateY(-3px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
   border-color: #cbd5e1;
+}
+
+.news-card-link:hover .news-card h3,
+.photo-card-link:hover .photo-caption h3 {
+  color: #2563eb;
 }
 
 .news-card img {
@@ -293,53 +278,7 @@ nav.main-nav li a.active {
 }
 
 /* ==========================================================================
-   Blog Post Cards
-   ========================================================================== */
-.blog-post {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 20px 24px;
-  margin-bottom: 16px;
-}
-
-.blog-post h2 {
-  font-size: 1.2rem;
-  color: #0f172a;
-  margin-bottom: 6px;
-  border-left: none;
-  padding-left: 0;
-}
-
-.blog-post p {
-  color: #64748b;
-  font-size: 0.92rem;
-}
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #64748b;
-  font-size: 0.88rem;
-  border-top: 1px solid #e2e8f0;
-  background: #ffffff;
-  margin-top: auto;
-}
-
-/* 淡入動畫 */
-.fade-in {
-  animation: fadeIn 0.4s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* ==========================================================================
-   Photo Gallery Grid Section (相簿專用樣式)
+   Photo Gallery Grid Section
    ========================================================================== */
 .photo-grid {
   display: grid;
@@ -387,15 +326,48 @@ footer {
   font-size: 0.88rem;
   line-height: 1.4;
 }
-/* 卡片連結樣式修飾 */
-.news-card-link,
-.photo-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+
+/* ==========================================================================
+   Blog Post Cards
+   ========================================================================== */
+.blog-post {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
 }
 
-.news-card-link:hover .news-card h3,
-.photo-card-link:hover .photo-caption h3 {
-  color: #2563eb;
+.blog-post h2 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.blog-post p {
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 0.88rem;
+  border-top: 1px solid #e2e8f0;
+  background: #ffffff;
+  margin-top: auto;
+}
+
+/* 淡入動畫 */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
