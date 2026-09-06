@@ -1,19 +1,12 @@
 /* ==========================================================================
    Global Reset & Modern Typography
    ========================================================================== */
-/* 於 style.css 最上方加入以下程式碼 */
 html {
-  /* 關鍵屬性：預留固定捲軸軌道空間，防止跨頁面切換時左右版面跳動 */
+  /* 預留固定捲軸軌道空間，防止跨頁面切換時左右版面跳動 */
   scrollbar-gutter: stable;
-  /* 針對舊版瀏覽器備用方案：強制顯示滾動條軌道 */
   overflow-y: scroll;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +61,7 @@ header {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* 左側名字與右側選單向兩端推開 */
+  justify-content: space-between;
   align-items: center;
   padding: 14px 24px;
 }
@@ -284,10 +277,16 @@ nav.main-nav li a.active {
   font-weight: 600;
 }
 
+/* 固定卡片描述區域至少留出兩排文字高度，確保各卡片高低一致 */
 .news-card p {
   color: #64748b;
   font-size: 0.88rem;
   line-height: 1.5;
+  min-height: 3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ==========================================================================
@@ -334,10 +333,16 @@ nav.main-nav li a.active {
   font-weight: 600;
 }
 
+/* 固定相簿卡片描述區域至少留出兩排文字高度 */
 .photo-caption p {
   color: #64748b;
   font-size: 0.88rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  min-height: 3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ==========================================================================
