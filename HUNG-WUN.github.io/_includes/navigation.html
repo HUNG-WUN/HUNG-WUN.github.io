@@ -1,0 +1,17 @@
+<header>
+  <div class="nav-container">
+    <a href="{{ '/index.html' | relative_url }}" class="logo-btn">黃敬汶 Gavin</a>
+    <button class="nav-toggle" type="button" aria-label="開啟導覽選單" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主要導覽">
+      <ul>
+        <li><a href="{{ '/index.html' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>首頁</a></li>
+        <li><a href="{{ '/about.html' | relative_url }}"{% if page.url == '/about.html' %} class="active"{% endif %}>關於我</a></li>
+        <li><a href="{{ '/resume.html' | relative_url }}"{% if page.url == '/resume.html' %} class="active"{% endif %}>履歷</a></li>
+        <li><a href="{{ '/gallery.html' | relative_url }}"{% if page.url == '/gallery.html' %} class="active"{% endif %}>作品集</a></li>
+        <li><a href="{{ '/blog.html' | relative_url }}"{% if page.url == '/blog.html' or page.collection == 'posts' %} class="active"{% endif %}>文章區</a></li>
+        <li><a href="{{ '/photos.html' | relative_url }}"{% if page.url == '/photos.html' %} class="active"{% endif %}>相簿紀錄</a></li>
+        <li><a href="{{ '/contact.html' | relative_url }}"{% if page.url == '/contact.html' %} class="active"{% endif %}>聯絡我</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

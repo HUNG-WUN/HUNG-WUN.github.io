@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<main class="article-page fade-in">
+  <article class="article-content">
+    <header class="article-header">
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y 年 %m 月 %d 日' }}</time>
+        {% if page.categories.size > 0 %}<span aria-hidden="true"> · </span>{{ page.categories | join: '、' }}{% endif %}
+      </p>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p class="article-lead">{{ page.description }}</p>{% endif %}
+    </header>
+
+    {% if page.image %}
+      <figure class="article-hero">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+        {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+
+    <div class="article-body">
+      {{ content }}
+    </div>
+
+    <p class="back-link"><a href="{{ '/blog.html' | relative_url }}">← 回到文章區</a></p>
+  </article>
+</main>

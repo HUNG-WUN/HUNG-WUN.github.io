@@ -1,0 +1,30 @@
+---
+layout: default
+title: 首頁
+description: 黃敬汶（Gavin Huang）的個人作品集，包含研究、技術專案、活動與學習歷程。
+---
+
+<main class="fade-in">
+  <section class="hero-card">
+    <img src="{{ '/images/avatar.jpg' | relative_url }}" alt="黃敬汶大頭照" class="avatar" onerror="this.style.display='none'">
+    <h1>Hi! 我是黃敬汶（Gavin）</h1>
+    <p>專注於 Medical AI、軟體開發與自動化系統；這裡記錄我的研究、作品與成長歷程。</p>
+    <a href="{{ '/about.html' | relative_url }}" class="cta-btn">認識我更多</a>
+  </section>
+
+  <section class="latest-news" aria-label="最新文章">
+    <h2 class="section-title">最新文章與活動</h2>
+    <div class="news-grid">
+      {% for post in site.posts limit: 3 %}
+        <a href="{{ post.url | relative_url }}" class="news-card-link">
+          <article class="news-card">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description | default: post.excerpt | strip_html | truncate: 100 }}</p>
+          </article>
+        </a>
+      {% else %}
+        <p>近期文章準備中。</p>
+      {% endfor %}
+    </div>
+  </section>
+</main>

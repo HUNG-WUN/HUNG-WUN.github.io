@@ -1,0 +1,10 @@
+title: 黃敬汶 Gavin
+description: 黃敬汶（Gavin Huang）的個人網站，記錄作品、研究、活動與學習歷程。
+url: "https://hung-wun.github.io"
+baseurl: ""
+lang: zh-Hant
+timezone: Asia/Taipei
+permalink: /articles/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

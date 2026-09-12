@@ -1,0 +1,20 @@
+---
+layout: default
+title: 文章區
+description: 黃敬汶的研究、技術作品、活動紀錄與學習心得。
+---
+
+<main class="fade-in">
+  <section class="card-section">
+    <h1>研究、活動與學習紀錄</h1>
+    <p>我會在這裡整理每次活動、專案與研究的內容、照片、日期，以及自己的心得。</p>
+  </section>
+
+  <section aria-label="文章列表">
+    {% for post in site.posts %}
+      {% include article-card.html post=post %}
+    {% else %}
+      <p>文章準備中，敬請期待。</p>
+    {% endfor %}
+  </section>
+</main>
