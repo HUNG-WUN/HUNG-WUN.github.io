@@ -1,0 +1,391 @@
+/* ==========================================================================
+   Global Reset & Modern Typography
+   ========================================================================== */
+html {
+  /* 預留固定捲軸軌道空間，防止跨頁面切換時左右版面跳動 */
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+
+  /* Flexbox 黏性頁腳：確保 Footer 永遠釘在螢幕最底部 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #2563eb;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+}
+
+/* 統一頁面主容器寬度與邊界 */
+main {
+  max-width: 960px;
+  margin: 36px auto;
+  padding: 0 20px;
+  width: 100%;
+  flex: 1;
+}
+
+/* ==========================================================================
+   Header & Navigation (左側名字，右側選單對齊)
+   ========================================================================== */
+header {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+}
+
+.logo-btn {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav li a {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+nav.main-nav li a:hover,
+nav.main-nav li a.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  nav.main-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0f172a;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+  nav.main-nav ul.active {
+    display: flex;
+  }
+}
+
+/* ==========================================================================
+   Unified Card Layout (適用於所有頁面內容卡片)
+   ========================================================================== */
+.card-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 36px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  margin-bottom: 28px;
+}
+
+.card-section h1 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.card-section h2 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
+  margin: 28px 0 16px 0;
+  font-weight: 600;
+}
+
+.card-section ul {
+  padding-left: 20px;
+  color: #475569;
+}
+
+.card-section li {
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Hero Section (首頁上方簡介卡片)
+   ========================================================================== */
+.hero-card {
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 40px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  margin-bottom: 28px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #3b82f6;
+  margin: 0 auto 16px auto;
+  object-fit: cover;
+  background-color: #eff6ff;
+  box-shadow: 0 8px 16px -4px rgba(59, 130, 246, 0.2);
+}
+
+.hero-card h1 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.hero-card p {
+  color: #64748b;
+  font-size: 1rem;
+  max-width: 580px;
+  margin: 0 auto 20px auto;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 9px 22px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Grid News & Gallery Cards
+   ========================================================================== */
+.section-title {
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.news-card-link,
+.photo-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.news-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px;
+  transition: all 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+}
+
+.news-card-link:hover .news-card h3,
+.photo-card-link:hover .photo-caption h3 {
+  color: #2563eb;
+}
+
+.news-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  background-color: #f1f5f9;
+}
+
+.news-card h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* 固定卡片描述區域至少留出兩排文字高度，確保各卡片高低一致 */
+.news-card p {
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  min-height: 3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Photo Gallery Grid Section
+   ========================================================================== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.photo-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.photo-caption {
+  padding: 16px;
+}
+
+.photo-caption h3 {
+  font-size: 1.05rem;
+  color: #1e293b;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* 固定相簿卡片描述區域至少留出兩排文字高度 */
+.photo-caption p {
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  min-height: 3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Blog Post Cards
+   ========================================================================== */
+.blog-post {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.blog-post h2 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.blog-post p {
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 0.88rem;
+  border-top: 1px solid #e2e8f0;
+  background: #ffffff;
+  margin-top: auto;
+}
+
+/* 淡入動畫 */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
